@@ -1,0 +1,119 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    z-index: 1;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.navbar-logo i {
+    color: var(--white-color);
+}
+
+.navbar-logo-title {
+    font-size: 1.5em;
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: var(--main-font);
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.navbar-link {
+    text-decoration: none;
+    padding: 0rem 1rem;
+    color: var(--white-color);
+    font-size: 0.9rem;
+}
+
+.navbar-social {
+    color: var(--white-color);
+    padding: 0 0 0 1rem;
+}
+
+.navbar-button {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    border: none;
+    background: none;
+}
+
+.navbar-logo-title:hover{
+    cursor: pointer;
+}
+
+.navbar-link:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    transition: 0.3s ease-in;
+
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-container {
+        top: 0;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        height: 100px;
+        background-color: var(--main-color);
+    }
+    .navbar-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position:absolute;
+        top: 100px;
+        left: -100%;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    .navbar-links.active {
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .active .navbar-social {
+        padding: 1rem 0 0 0;
+    }
+
+    .navbar-link {
+        text-align: center;
+        padding: 2em 0;
+        /* background-color: antiquewhite; */
+    }
+
+    .navbar-link:hover {
+        text-decoration: underline;
+        color: var(--highlight-color);
+        transition: 0.3s ease-in;
+    }
+
+    .navbar-logo {
+        
+    }
+
+    .navbar-button {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        cursor: pointer;
+    }
+}

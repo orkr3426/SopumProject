@@ -1,0 +1,74 @@
+.about-hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    color: white;
+}
+
+.about-text h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: var(--highlight-color);
+    font-family: 'Abril Fatface', cursive;
+}
+
+.about-content {
+    display: flex;
+    padding: 4rem;
+}
+
+.about-content img {
+    width: 50%;
+    padding-right: 2rem;
+    
+}
+
+.about-content-description {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.about-content-description h2, 
+.about-content-description p{
+    padding: 2rem 0;
+    font-family: 'Sintony', sans-serif;
+}
+
+@media screen and (max-width: 840px) {
+    .about-content {
+        display: block;
+    }
+    .about-content img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-content-description h2,
+    .about-content-description p {
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .about-content {
+        margin: auto;
+        width: 70%;
+    }
+}
